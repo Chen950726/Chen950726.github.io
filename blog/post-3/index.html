@@ -2,7 +2,7 @@
 <html
   itemscope
   class=""
-  lang="en-us"
+  lang="zh"
   itemtype="http://schema.org/WebPage">
   <head>
     
@@ -93,6 +93,13 @@
 
 
 
+
+  
+    <link rel="alternate" hreflang="zh" href="/blog/post-3/" />
+  
+    <link rel="alternate" hreflang="en" href="/en/blog/post-3/" />
+  
+  <link rel="alternate" hreflang="x-default" href="/blog/post-3/" />
 
 
 
@@ -221,8 +228,8 @@
 <script>
   let indexURL = "/searchindex.json";
   let includeSectionsInSearch = ["blog"];
-  let no_results_for = "No results for";
-  let empty_search_results_placeholder = "Type something to search..";
+  let no_results_for = "沒有結果";
+  let empty_search_results_placeholder = "點擊搜尋";
 </script>
 
 
@@ -326,8 +333,8 @@
 
 
 <link
-  href="/css/style.min.3c178b8a83063731250da37a77266635fd7a132ff0210ec5c2b6b001fb31ca3d.css"
-  integrity="sha256-PBeLioMGNzElDaN6dyZmNf16Ey/wIQ7FwrawAfsxyj0="
+  href="/css/style.min.33903bf9b7c1c0805714acd8145cc02eb6363997e7f32486827b1aaf2cad6661.css"
+  integrity="sha256-M5A7+bfBwIBXFKzYFFzALrY2OZfn8ySGgnsaryytZmE="
   rel="stylesheet" />
 
 
@@ -495,35 +502,7 @@
               class="nav-link "
               
               href="/"
-              >Home</a
-            >
-          </li>
-        
-      
-        
-        
-        
-        
-          <li class="nav-item">
-            <a
-              class="nav-link "
-              
-              href="/about/"
-              >About</a
-            >
-          </li>
-        
-      
-        
-        
-        
-        
-          <li class="nav-item">
-            <a
-              class="nav-link "
-              
-              href="/elements/"
-              >Elements</a
+              >首頁</a
             >
           </li>
         
@@ -546,16 +525,8 @@
                 
                 
                 
-              
-                
-                
-                
-              
-                
-                
-                
                inline-flex items-center">
-              Pages
+              介紹
               <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
                 <path
                   d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
@@ -570,19 +541,8 @@
                   <a
                     class="nav-dropdown-link "
                     
-                    href="/404/">
-                    404 Page
-                  </a>
-                </li>
-              
-                
-                
-                <li class="nav-dropdown-item">
-                  <a
-                    class="nav-dropdown-link "
-                    
                     href="/authors/">
-                    Authors
+                    作者
                   </a>
                 </li>
               
@@ -592,19 +552,8 @@
                   <a
                     class="nav-dropdown-link "
                     
-                    href="/blog/">
-                    Blog
-                  </a>
-                </li>
-              
-                
-                
-                <li class="nav-dropdown-item">
-                  <a
-                    class="nav-dropdown-link "
-                    
-                    href="/categories/">
-                    Categories
+                    href="/about/">
+                    工作室介紹
                   </a>
                 </li>
               
@@ -615,7 +564,42 @@
                     class="nav-dropdown-link "
                     
                     href="/contact/">
-                    Contact
+                    聯絡資訊
+                  </a>
+                </li>
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+        
+        
+          <li class="nav-item nav-dropdown group relative">
+            <span
+              class="nav-link 
+                
+                
+                
+               inline-flex items-center">
+              文章
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+              </svg>
+            </span>
+            <ul
+              class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100">
+              
+                
+                
+                <li class="nav-dropdown-item">
+                  <a
+                    class="nav-dropdown-link "
+                    
+                    href="/categories/">
+                    分類
                   </a>
                 </li>
               
@@ -654,6 +638,27 @@
 
 
 
+
+  <select class="mr-5 pl-2 py-1 dark:bg-darkmode-theme-light rounded" onchange="location = this.value">
+    
+      
+        <option
+          id="zh"
+          value="/blog/post-3/"
+          selected>
+          中文
+        </option>
+      
+    
+      
+        <option
+          id="en"
+          value="/en/blog/post-3/">
+          English
+        </option>
+      
+    
+  </select>
 
 
       
@@ -782,12 +787,12 @@
             data-search-input
             autocomplete="off"
             aria-label="Search"
-            placeholder="Search Post ..." />
+            placeholder="搜尋文章" />
         </div>
         <div class="search-wrapper-body">
           <div class="search-result" data-search-result></div>
           <span class="search-result-empty">
-            Type something to search..
+            點擊搜尋
           </span>
         </div>
         <div class="search-wrapper-footer">
@@ -997,7 +1002,7 @@
             
             <li class="mr-4 inline-block">
               <i class="fa-regular fa-clock mr-2"></i>
-              April 4, 2022
+              2022年4月4日
             </li>
           </ul>
           <div class="content mb-10">
@@ -1015,7 +1020,7 @@
             
             
               <div class="lg:col-5 mb-10 flex items-center lg:mb-0">
-                <h5 class="mr-3">Tags :</h5>
+                <h5 class="mr-3">標籤 :</h5>
                 <ul>
                   
                     <li class="inline-block">
@@ -1057,7 +1062,7 @@
 
 
 <div class="share-icons">
-  <h5 class="share-title">Share :</h5>
+  <h5 class="share-title">分享 :</h5>
 
 
   
@@ -1082,7 +1087,7 @@
   
     <a
       class="share-link share-twitter"
-      href="https://twitter.com/intent/tweet/?text=Share&amp;url=%2fblog%2fpost-3%2f"
+      href="https://twitter.com/intent/tweet/?text=%e5%88%86%e4%ba%ab&amp;url=%2fblog%2fpost-3%2f"
       target="_blank"
       rel="noopener"
       aria-label="share twitter">
@@ -1100,7 +1105,7 @@
   
     <a
       class="share-link share-email"
-      href="mailto:?subject=Share&amp;body=%2fblog%2fpost-3%2f"
+      href="mailto:?subject=%e5%88%86%e4%ba%ab&amp;body=%2fblog%2fpost-3%2f"
       target="_self"
       rel="noopener"
       aria-label="share email">
@@ -1118,7 +1123,7 @@
   
     <a
       class="share-link share-reddit"
-      href="https://reddit.com/submit/?url=%2fblog%2fpost-3%2f&amp;resubmit=true&amp;title=Share"
+      href="https://reddit.com/submit/?url=%2fblog%2fpost-3%2f&amp;resubmit=true&amp;title=%e5%88%86%e4%ba%ab"
       target="_blank"
       rel="noopener"
       aria-label="share reddit">
@@ -1191,169 +1196,8 @@
       
       
         <div class="section pb-0">
-          <h2 class="h3 mb-12">Related Posts</h2>
+          <h2 class="h3 mb-12">相關文章</h2>
           <div class="row">
-            
-              <div class="lg:col-4">
-                <div class="bg-body dark:bg-darkmode-body">
-  
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-  
-    
-      
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-    
-    
-    
-
-
-    
-    
-      
-      
-        
-
-        
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-
-
-        <picture>
-          <source
-            
-              srcset="/images/image-placeholder_huf5f2d24635a285cfc2259aa9741acb2a_4881_545x0_resize_q80_h2_lanczos_3.webp"
-            
-            media="(max-width: 575px)" />
-          <source
-            
-              srcset="/images/image-placeholder_huf5f2d24635a285cfc2259aa9741acb2a_4881_600x0_resize_q80_h2_lanczos_3.webp"
-            
-            media="(max-width: 767px)" />
-          <source
-            
-              srcset="/images/image-placeholder_huf5f2d24635a285cfc2259aa9741acb2a_4881_700x0_resize_q80_h2_lanczos_3.webp"
-            
-            media="(max-width: 991px)" />
-          <source
-            
-              srcset="/images/image-placeholder_huf5f2d24635a285cfc2259aa9741acb2a_4881_1110x0_resize_q80_h2_lanczos_3.webp"
-             />
-          <img
-            
-              loading="lazy" decoding="async"
-              src="/images/image-placeholder_huf5f2d24635a285cfc2259aa9741acb2a_4881_1110x0_resize_lanczos_3.png"
-            class=" mb-6 w-full rounded img"
-            alt="How to build an Application with modern Technology"
-            width="1096"
-            height="480" />
-        </picture>
-      
-      
-    
-    
-  
-
-
-  
-
-
-  
-  <h4 class="mb-3">
-    <a href="/blog/post-1/">
-      How to build an Application with modern Technology
-    </a>
-  </h4>
-  
-  
-    <ul class="mb-4">
-      <li class="mr-4 inline-block">
-        <a href="/authors/john-doe/">
-          <i class="fa-regular fa-circle-user mr-2"></i>John Doe
-        </a>
-      </li>
-      <li class="mr-4 inline-block">
-        <i class="fa-regular fa-folder mr-1"></i>
-        
-          <a
-            href="/categories/application/"
-            class="ms-1"
-            >Application
-              ,
-            
-          </a>
-        
-          <a
-            href="/categories/data/"
-            class="ms-1"
-            >Data
-          </a>
-        
-      </li>
-    </ul>
-  
-  <p class="mb-6">Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat.</p>
-  <a class="btn btn-outline-primary btn-sm" href="/blog/post-1/">
-    Read More
-  </a>
-</div>
-
-              </div>
             
               <div class="lg:col-4">
                 <div class="bg-body dark:bg-darkmode-body">
@@ -1510,7 +1354,168 @@
   
   <p class="mb-6">Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat.</p>
   <a class="btn btn-outline-primary btn-sm" href="/blog/post-2/">
-    Read More
+    閱讀更多
+  </a>
+</div>
+
+              </div>
+            
+              <div class="lg:col-4">
+                <div class="bg-body dark:bg-darkmode-body">
+  
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  
+    
+      
+    
+
+
+    
+    
+
+
+    
+    
+      
+      
+    
+    
+    
+
+
+    
+    
+      
+      
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+        
+        
+
+
+        <picture>
+          <source
+            
+              srcset="/images/image-placeholder_huf5f2d24635a285cfc2259aa9741acb2a_4881_545x0_resize_q80_h2_lanczos_3.webp"
+            
+            media="(max-width: 575px)" />
+          <source
+            
+              srcset="/images/image-placeholder_huf5f2d24635a285cfc2259aa9741acb2a_4881_600x0_resize_q80_h2_lanczos_3.webp"
+            
+            media="(max-width: 767px)" />
+          <source
+            
+              srcset="/images/image-placeholder_huf5f2d24635a285cfc2259aa9741acb2a_4881_700x0_resize_q80_h2_lanczos_3.webp"
+            
+            media="(max-width: 991px)" />
+          <source
+            
+              srcset="/images/image-placeholder_huf5f2d24635a285cfc2259aa9741acb2a_4881_1110x0_resize_q80_h2_lanczos_3.webp"
+             />
+          <img
+            
+              loading="lazy" decoding="async"
+              src="/images/image-placeholder_huf5f2d24635a285cfc2259aa9741acb2a_4881_1110x0_resize_lanczos_3.png"
+            class=" mb-6 w-full rounded img"
+            alt="How to build an Application with modern Technology"
+            width="1096"
+            height="480" />
+        </picture>
+      
+      
+    
+    
+  
+
+
+  
+
+
+  
+  <h4 class="mb-3">
+    <a href="/blog/post-1/">
+      How to build an Application with modern Technology
+    </a>
+  </h4>
+  
+  
+    <ul class="mb-4">
+      <li class="mr-4 inline-block">
+        <a href="/authors/john-doe/">
+          <i class="fa-regular fa-circle-user mr-2"></i>John Doe
+        </a>
+      </li>
+      <li class="mr-4 inline-block">
+        <i class="fa-regular fa-folder mr-1"></i>
+        
+          <a
+            href="/categories/application/"
+            class="ms-1"
+            >Application
+              ,
+            
+          </a>
+        
+          <a
+            href="/categories/data/"
+            class="ms-1"
+            >Data
+          </a>
+        
+      </li>
+    </ul>
+  
+  <p class="mb-6">Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat.</p>
+  <a class="btn btn-outline-primary btn-sm" href="/blog/post-1/">
+    閱讀更多
   </a>
 </div>
 
@@ -1643,17 +1648,7 @@
                 href="
                   /about/
                 "
-                >About</a
-              >
-            </li>
-          
-            <li class="m-3 inline-block">
-              <a
-                
-                href="
-                  /elements/
-                "
-                >Elements</a
+                >介紹</a
               >
             </li>
           
@@ -1663,7 +1658,7 @@
                 href="
                   /privacy-policy/
                 "
-                >Privacy Policy</a
+                >隱私協議</a
               >
             </li>
           

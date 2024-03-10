@@ -1,7 +1,7 @@
 {
-  "name": "Hugoplate",
-  "short_name": "Hugoplate",
-  "lang": "en-us",
+  "name": "SenioRS",
+  "short_name": "SenioRS",
+  "lang": "zh",
   "display": "fullscreen",
   "orientation" : "portrait",
   "start_url": "/?utm_source=web_app_manifest",
