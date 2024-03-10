@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on SenioRS</title>
-    <link>/en/tags/</link>
+    <link>//localhost:1313/en/tags/</link>
     <description>Recent content in Tags on SenioRS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 04 Apr 2022 05:00:00 +0000</lastBuildDate>
-    <atom:link href="/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nextjs</title>
-      <link>/en/tags/nextjs/</link>
+      <link>//localhost:1313/en/tags/nextjs/</link>
       <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
-      <guid>/en/tags/nextjs/</guid>
+      <guid>//localhost:1313/en/tags/nextjs/</guid>
       <description></description>
     </item>
     <item>
       <title>Silicon</title>
-      <link>/en/tags/silicon/</link>
+      <link>//localhost:1313/en/tags/silicon/</link>
       <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
-      <guid>/en/tags/silicon/</guid>
+      <guid>//localhost:1313/en/tags/silicon/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
-      <link>/en/tags/software/</link>
+      <link>//localhost:1313/en/tags/software/</link>
       <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
-      <guid>/en/tags/software/</guid>
+      <guid>//localhost:1313/en/tags/software/</guid>
       <description></description>
     </item>
     <item>
       <title>Tailwind</title>
-      <link>/en/tags/tailwind/</link>
+      <link>//localhost:1313/en/tags/tailwind/</link>
       <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
-      <guid>/en/tags/tailwind/</guid>
+      <guid>//localhost:1313/en/tags/tailwind/</guid>
       <description></description>
     </item>
     <item>
       <title>Technology</title>
-      <link>/en/tags/technology/</link>
+      <link>//localhost:1313/en/tags/technology/</link>
       <pubDate>Mon, 04 Apr 2022 05:00:00 +0000</pubDate>
-      <guid>/en/tags/technology/</guid>
+      <guid>//localhost:1313/en/tags/technology/</guid>
       <description></description>
     </item>
   </channel>
