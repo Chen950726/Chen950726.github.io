@@ -1,8 +1,8 @@
 # 莊博丞 Eddie Chuang
 
-👋 **NYCU Arete Honors Program | 專注於自動駕駛、感測器融合與敏捷管理**
+👋 **科技管理/資訊工程/智慧駕駛/太空科技與工程**
 
-📍 台北/新竹，台灣 | 📞 0929-500-169 | 📧 [Chen950726@gmail.com](mailto:Chen950726@gmail.com) | 🌐 [GitHub](chen950726.com)
+📍 高雄/新竹，台灣 | 📞 0929-500-169 | 📧 [Chen950726@gmail.com](mailto:Chen950726@gmail.com) | 🌐 [GitHub](chen950726.com)
 
 ---
 
