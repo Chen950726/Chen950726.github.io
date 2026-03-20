@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莊博丞 Po-Cheng Chuang | 履歷與個人網站</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Markdown parsing library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #374151; /* Gray 700 */
+            --heading-color: #111827; /* Gray 900 */
+            --link-color: #2563eb; /* Blue 600 */
+            --link-hover: #1d4ed8;
+            --border-color: #e5e7eb;
+            --muted-text: #6b7280;
+            --accent-bg: #f9fafb;
+            --max-width: 800px;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.75;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        #app {
+            width: 100%;
+            max-width: var(--max-width);
+            padding: 3rem 1.5rem 6rem;
+            box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(15px);
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Markdown Styles */
+        #content h1, #content h2, #content h3, #content h4 {
+            color: var(--heading-color);
+            font-weight: 700;
+            margin-top: 2em;
+            margin-bottom: 0.75em;
+            line-height: 1.3;
+        }
+
+        #content h1 {
+            font-size: 2.5rem;
+            letter-spacing: -0.025em;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        #content h2 {
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        #content h3 {
+            font-size: 1.25rem;
+        }
+
+        #content p {
+            margin-bottom: 1.25em;
+            font-size: 1.05rem;
+        }
+
+        #content a {
+            color: var(--link-color);
+            text-decoration: underline;
+            text-decoration-color: rgba(37, 99, 235, 0.2);
+            text-underline-offset: 4px;
+            transition: all 0.2s ease;
+        }
+
+        #content a:hover {
+            text-decoration-color: var(--link-color);
+            color: var(--link-hover);
+        }
+
+        #content ul, #content ol {
+            margin-bottom: 1.25em;
+            padding-left: 1.5rem;
+        }
+
+        #content li {
+            margin-bottom: 0.5em;
+            font-size: 1.05rem;
+        }
+
+        #content li > p {
+            margin-top: 0.25em;
+            margin-bottom: 0.25em;
+        }
+
+        #content blockquote {
+            border-left: 4px solid var(--border-color);
+            margin: 1.5em 0;
+            padding: 0.5em 0 0.5em 1.25em;
+            color: var(--muted-text);
+            background-color: var(--accent-bg);
+            border-radius: 0 4px 4px 0;
+            font-style: italic;
+        }
+
+        #content hr {
+            height: 1px;
+            background-color: var(--border-color);
+            border: none;
+            margin: 3rem 0;
+        }
+
+        #content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin: 2rem 0;
+        }
+
+        #content code {
+            background-color: var(--accent-bg);
+            color: var(--heading-color);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            border: 1px solid var(--border-color);
+        }
+
+        #content pre {
+            background-color: #1f2937;
+            color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5em 0;
+        }
+
+        #content pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+            border: none;
+            font-size: 0.9em;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            width: 40px;
+            height: 40px;
+            margin: 100px auto;
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--link-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Error message & Guide */
+        .error-card {
+            background: #fff;
+            border: 1px solid #fee2e2;
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            margin-top: 2rem;
+        }
+
+        .error-card h3 {
+            color: #991b1b;
+            margin-top: 0 !important;
+        }
+
+        .error-card p {
+            color: #4b5563;
+            font-size: 0.95rem !important;
+            margin-bottom: 2rem !important;
+        }
+
+        .solution-box {
+            text-align: left;
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 2rem;
+        }
+
+        .solution-box h4 {
+            margin-top: 0 !important;
+            font-size: 1rem;
+            color: #111827;
+        }
+
+        .solution-box code {
+            display: block;
+            margin-top: 0.5rem;
+            padding: 0.75rem !important;
+            background: #111827 !important;
+            color: #f3f4f6 !important;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--link-color);
+            color: white !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none !important;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+            border: none;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--link-hover);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        /* Print styling for PDF generation */
+        @media print {
+            body { font-size: 12pt; color: #000; }
+            #app { padding: 0; max-width: 100%; animation: none; opacity: 1; transform: none; }
+            #content a { text-decoration: none; color: #000; }
+            /* Show URLs after links when printing */
+            #content a[href^="http"]:after { content: " (" attr(href) ")"; font-size: 0.85em; color: #666; }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="content">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const contentDiv = document.getElementById('content');
+            
+            // marked.js configuration
+            marked.setOptions({
+                breaks: true,
+                gfm: true
+            });
+
+            const renderMarkdown = (text) => {
+                const rawHtml = marked.parse(text);
+                const cleanHtml = DOMPurify.sanitize(rawHtml);
+                contentDiv.innerHTML = cleanHtml;
+                contentDiv.style.opacity = 0;
+                setTimeout(() => {
+                    contentDiv.style.transition = 'opacity 0.4s ease';
+                    contentDiv.style.opacity = 1;
+                }, 50);
+            };
+
+            const showError = (error) => {
+                const isLocal = window.location.protocol === 'file:';
+                contentDiv.innerHTML = `
+                    <div class="error-card">
+                        <h3>⚠️ 載入失敗</h3>
+                        <p>${error.message}</p>
+                        
+                        ${isLocal ? `
+                        <div class="solution-box">
+                            <h4>為什麼會這樣？</h4>
+                            <p>這是因為瀏覽器的安全性限制 (CORS)。當您直接雙擊 HTML 檔案開啟時，瀏覽器會禁止讀取同資料夾下的 Markdown 檔案。</p>
+                            <h4>解決方案 A：直接手動選取 (最快)</h4>
+                            <p>點擊下方的按鈕，選擇資料夾中的 <code>resume.md</code> 即可預覽：</p>
+                            <button class="btn-primary" onclick="document.getElementById('file-input').click()">手動選取 resume.md</button>
+                            <input type="file" id="file-input" accept=".md" onchange="handleFileSelect(event)">
+                        </div>
+                        
+                        <div class="solution-box">
+                            <h4>解決方案 B：透過 GitHub Pages 瀏覽</h4>
+                            <p>將檔案上傳到 GitHub 並啟動 Pages 後，此錯誤會自動消失。</p>
+                        </div>
+                        ` : ''}
+                    </div>
+                `;
+            };
+
+            // Global file handler for the manual selection
+            window.handleFileSelect = (event) => {
+                const file = event.target.files[0];
+                if (!file) return;
+                
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    renderMarkdown(e.target.result);
+                };
+                reader.readAsText(file);
+            };
+
+            // Fetch markdown content
+            fetch('./resume.md')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`找不到履歷檔案 (HTTP ${response.status})。`);
+                    }
+                    return response.text();
+                })
+                .then(markdownText => {
+                    renderMarkdown(markdownText);
+                })
+                .catch(error => {
+                    showError(error);
+                });
+        });
+    </script>
+</body>
+</html>
